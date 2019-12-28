@@ -55,12 +55,12 @@ class App extends React.Component {
 		return (
 			<div className="app">
 				<AddColorForm onNewColor={addColor} />
-				{/* <ColorList colors={colors}
+				<ColorList colors={colors}
 					onRate={rateColor}
-					onRemove={removeColor} /> */}
+					onRemove={removeColor} />
 			</div>
 		)
 	}
 }
 
-export default App;
+export default App

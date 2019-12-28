@@ -30,4 +30,4 @@ AddColorForm.propTypes = {
 	onNewColor: PropTypes.func
 }
 
-export default AddColorForm;
+export default AddColorForm
