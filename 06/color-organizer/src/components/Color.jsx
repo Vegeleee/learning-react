@@ -12,15 +12,15 @@ const Color = ({title, color, rating=0, onRate=f=>f, onRemove=f=>f}) => {
 				style={{ backgroundColor: color }}>
 			</div>
 			<div>
-				{/* <StarRating starsSelected={rating} onRate={onRate} /> */}
+				<StarRating starsSelected={rating} onRate={onRate} />
 			</div>
 		</section>
 	)
 }
 
 Color.propTypes = {
-	title: PropTypes.string,
-	color: PropTypes.string,
+	title: PropTypes.string.isRequired,
+	color: PropTypes.string.isRequired,
 	rating: PropTypes.number,
 	onRate: PropTypes.func,
 	onRemove: PropTypes.func
