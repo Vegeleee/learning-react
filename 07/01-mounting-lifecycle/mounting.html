@@ -45,7 +45,7 @@
 					}
 				}
 
-				componentWillMount() {
+				componentDidMount() {
 					this.setState({loading: true})
 					getFakeMembers(this.props.count).then(
 						members => {
@@ -57,7 +57,7 @@
 					)
 				}
 
-				componentWillUpdate() {
+				componentDidUpdate() {
 					console.log('updating lifecycle')
 				}
 
