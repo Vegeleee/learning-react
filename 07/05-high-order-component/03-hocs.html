@@ -22,7 +22,7 @@
 				constructor(props) {
 					super(props)
 					this.state = {
-						data:[],
+						data: [],
 						loading: false,
 						loaded: false
 					}
@@ -56,21 +56,20 @@
 				}
 			}
 
-		const PeopleList = ({ data }) =>
-			<ol className="people-list">
-				{data.results.map((person, i) => {
-					const { first, last } = person.name
-					return <li key={i}>{first} {last}</li>
-				})}
-			</ol>
+		const CountryNames = ({ data, selected = '' }) =>
+			<select className="country-names" defaultValue={selected}>
+				{data.map(({name}, i) =>
+					<option key={i} value={name}>{name}</option>
+				)}
+			</select>
 
-		const RandomMeUsers = DataComponent(
-			PeopleList, 
-			"https://randomuser.me/api?results=10"
+		const CountryDropDown = DataComponent(
+			CountryNames,
+			"https://restcountries.eu/rest/v1/all"
 		)
 
 		render(
-			<RandomMeUsers />,
+			<CountryDropDown selected="United States" />,
 			document.getElementById('react-container')
 		)
 
