@@ -1,5 +1,5 @@
-import C from '../../redux/constants'
-import { colors } from '../../redux/store/reducers'
+import C from '../../../redux/constants'
+import { sort } from '../../../redux/store/reducers'
 import deepFreeze from 'deep-freeze'
 
 describe("sort Reducer", () => {

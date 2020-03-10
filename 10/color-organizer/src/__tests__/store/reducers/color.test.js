@@ -1,8 +1,8 @@
-import C from '../../redux/constants'
-import { color } from '../../redux/store/reducers'
+import C from '../../../redux/constants'
+import { color } from '../../../redux/store/reducers'
 import deepFreeze from 'deep-freeze'
 
-describe('color Reducer', () => {
+describe("color Reducer", () => {
 
 	it("ADD_COLOR success", () => {
 		const state = {}
@@ -54,4 +54,5 @@ describe('color Reducer', () => {
 
 	it("Defaults array for incorrect action", () =>
 		expect(color()).toEqual({}))
+
 })

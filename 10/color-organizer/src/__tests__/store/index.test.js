@@ -1,5 +1,5 @@
-import C from '../redux/constants'
-import storeFactory from '../redux/store/index'
+import C from '../../redux/constants'
+import storeFactory from '../../redux/store/index'
 
 describe("Store Factory", () => {
 
